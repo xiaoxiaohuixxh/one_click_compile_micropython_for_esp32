@@ -63,3 +63,10 @@ else
     exit 0
 fi
 source ~/.profile
+echo "============================================================"
+echo "      Compiling"
+echo "============================================================"
+cd $tmp_root_dir
+cd micropython/mpy-cross && make && cd $tmp_root_dir
+cd $tmp_root_dir
+cd micropython/ports/esp32 && make
